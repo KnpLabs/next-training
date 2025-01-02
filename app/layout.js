@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${bagelFatOne.variable}`}>
-        <header className="page-header">
+        <header>
           <div className="logo-container">
             <Image
               className="logo-image"
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
             </a>
           </div>
         </header>
-        <nav className="page-nav">
+        <nav>
           <ul>
             <li>
               <a href="/">Home</a>
@@ -67,8 +67,8 @@ export default function RootLayout({ children }) {
           </ul>
         </nav>
         {children}
-        <footer className="page-footer">
-          <p>Copyright © 2025 KanapéShop. Tous droits réservés.</p>
+        <footer>
+          <div>Copyright © 2025 KanapéShop. Tous droits réservés.</div>
         </footer>
       </body>
     </html>

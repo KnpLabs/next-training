@@ -4,6 +4,7 @@
   --white: #ffffff;
   --black: #000000;
   --red: #ff0000;
+  --blue: #163262;
 }
 
 html,
@@ -19,6 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -32,7 +35,7 @@ a {
   text-decoration: none;
 }
 
-.page-header {
+header {
   background-color: var(--red);
   color: var(--white);
   padding: 0 1.5rem;
@@ -63,7 +66,7 @@ a {
   gap: 1.5rem;
 }
 
-.page-footer {
+footer {
   background-color: var(--black);
   color: var(--white);
   font-weight: bold;
@@ -71,6 +74,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: auto;
 }
 
 .home-products {
@@ -83,19 +87,20 @@ a {
   font-style: italic;
 }
 
-.page {
+main {
   padding: 1rem;
+  width: -webkit-fill-available;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.page-nav {
+nav {
   background-color: var(--white);
   color: var(--black);
   height: 3.5rem;
 }
 
-.page-nav ul {
+nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -104,12 +109,23 @@ a {
   height: 100%;
 }
 
-.page-nav a {
+nav a {
   padding: 1.1rem 1.5rem;
   font-weight: bold;
   border: 1px solid transparent;
 }
 
-.page-nav a:hover {
+nav a:hover {
   border-color: var(--black);
+}
+
+h2 {
+  width: 42%;
+  border-bottom: 7px solid var(--blue);
+  line-height: 30px;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 2rem;
 }

@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="page">
+    <main>
       <section>
         <h2>Best sellers</h2>
         <div className="home-products">
