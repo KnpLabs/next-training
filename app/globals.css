@@ -119,6 +119,15 @@ nav a:hover {
   border-color: var(--black);
 }
 
+nav a.active {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h1 {
+  text-align: center;
+}
+
 h2 {
   width: 42%;
   border-bottom: 7px solid var(--blue);
@@ -128,4 +137,10 @@ h2 {
 
 p {
   margin-bottom: 2rem;
+}
+
+.tableflip {
+  text-align: center;
+  font-size: 5rem;
+  margin: 3rem;
 }
