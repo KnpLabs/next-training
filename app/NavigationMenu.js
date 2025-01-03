@@ -1,21 +1,52 @@
+'use client';
+import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+
 export default function NavigationMenu() {
+  const pathname = usePathname();
+
   return (
   <nav>
     <ul>
       <li>
-        <a href="/">Home</a>
+        <Link
+          className={pathname === '/' ? 'active' : ''}
+          href="/"
+        >
+          Home
+        </Link>
       </li>
       <li>
-        <a href="/shop">Shop</a>
+        <Link
+          className={pathname === '/shop' ? 'active' : ''}
+          href="/shop"
+        >
+          Shop
+        </Link>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <Link
+          className={pathname === '/contact' ? 'active' : ''}
+          href="/contact"
+        >
+          Contact
+        </Link>
       </li>
       <li>
-        <a href="/refunds">Refunds</a>
+        <Link
+          className={pathname === '/refunds' ? 'active' : ''}
+          href="/refunds"
+        >
+          Refunds
+        </Link>
       </li>
       <li>
-        <a href="/about">About</a>
+        <Link
+          className={pathname === '/about' ? 'active' : ''}
+          href="/about"
+        >
+          About
+        </Link>
       </li>
     </ul>
   </nav>
