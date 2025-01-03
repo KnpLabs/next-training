@@ -1,6 +1,7 @@
 import { Inter, Bagel_Fat_One } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
+import NavigationMenu from "./NavigationMenu";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,25 +48,7 @@ export default function RootLayout({ children }) {
             </a>
           </div>
         </header>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/shop">Shop</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/refunds">Refunds</a>
-            </li>
-            <li>
-              <a href="about">About</a>
-            </li>
-          </ul>
-        </nav>
+        <NavigationMenu />
         {children}
         <footer>
           <div>Copyright © 2025 KanapéShop. Tous droits réservés.</div>
