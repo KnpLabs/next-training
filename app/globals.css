@@ -81,16 +81,38 @@ footer {
   min-height: 25vh;
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .home-products p {
-  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.home-products ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-products article {
+  padding: 1rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-products h3 {
+  font-weight: normal;
 }
 
 main {
   padding: 1rem;
   width: -webkit-fill-available;
-  max-width: 80rem;
+  max-width: 56rem;
   margin: 0 auto;
 }
 
