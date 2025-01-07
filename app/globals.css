@@ -98,7 +98,7 @@ footer {
 }
 
 .home-products article {
-  padding: 0.25rem;
+  padding: 0.75rem;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
