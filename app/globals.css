@@ -98,7 +98,7 @@ footer {
 }
 
 .home-products article {
-  padding: 1rem;
+  padding: 0.25rem;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
@@ -107,6 +107,7 @@ footer {
 
 .home-products h3 {
   font-weight: normal;
+  margin-top: 0.5rem;
 }
 
 main {
