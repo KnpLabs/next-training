@@ -1,7 +1,8 @@
+import OnSales from "./OnSales";
+import { Suspense } from "react";
+
 export default async function Home () {
   const bestSellers = await fetch('http://localhost:8000/best-sellers')
-    .then(res => res.json());
-  const onSales = await fetch('http://localhost:8000/on-sales')
     .then(res => res.json());
 
   return (
@@ -25,17 +26,9 @@ export default async function Home () {
       <section>
         <h2>On sales</h2>
         <div className="home-products">
-          <ul>
-            {onSales.map(onSale => (
-              <li>
-                <article>
-                  <img src={onSale.image} alt="" />
-                  <h3>{onSale.name}</h3>
-                  <p>{onSale.price}</p>
-                </article>
-              </li>
-            ))}
-          </ul>
+          <Suspense fallback={<p>Loading...</p>}>
+            <OnSales />
+          </Suspense>
         </div>
       </section>
       <section>
