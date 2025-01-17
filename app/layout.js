@@ -3,6 +3,10 @@ import Image from "next/image";
 import "./globals.css";
 import NavigationMenu from "./NavigationMenu";
 
+export const metadata = {
+  title: 'KanapéShop',
+}
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
