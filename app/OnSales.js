@@ -7,7 +7,7 @@ export default async function OnSales () {
       {onSales.map(onSale => (
         <li>
           <article>
-            <img src={onSale.image} alt="" />
+            <img src={onSale.imageSmall} alt="" />
             <h3>{onSale.name}</h3>
             <p>{onSale.price}</p>
           </article>
