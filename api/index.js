@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 8000;
 
+const loremIpsumDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
 app.get("/best-sellers", (req, res) => {
   res.json([
     {
@@ -9,6 +11,7 @@ app.get("/best-sellers", (req, res) => {
       name: "Le Marquis",
       imageSmall: "http://localhost:3000/le-marquis_small.jpg",
       imageLarge: "http://localhost:3000/le-marquis_large.jpg",
+      description: loremIpsumDescription,
       price: "8000€",
     },
     {
@@ -16,6 +19,7 @@ app.get("/best-sellers", (req, res) => {
       name: "Nuage",
       imageSmall: "http://localhost:3000/nuage_small.jpg",
       imageLarge: "http://localhost:3000/nuage_large.jpg",
+      description: loremIpsumDescription,
       price: "700€",
     },
     {
@@ -23,6 +27,7 @@ app.get("/best-sellers", (req, res) => {
       name: "Boëme",
       imageSmall: "http://localhost:3000/boeme_small.jpg",
       imageLarge: "http://localhost:3000/boeme_large.jpg",
+      description: loremIpsumDescription,
       price: "3000€",
     },
     {
@@ -30,6 +35,7 @@ app.get("/best-sellers", (req, res) => {
       name: "Obsidian",
       imageSmall: "http://localhost:3000/obsidian_small.jpg",
       imageLarge: "http://localhost:3000/obsidian_large.jpg",
+      description: loremIpsumDescription,
       price: "5320€",
     },
   ]);
@@ -43,6 +49,7 @@ app.get("/on-sales", (req, res) => {
         name: "Bobby",
         imageSmall: "http://localhost:3000/bobby_small.jpg",
         imageLarge: "http://localhost:3000/bobby_large.jpg",
+        description: loremIpsumDescription,
         price: "300€",
       },
       {
@@ -50,6 +57,7 @@ app.get("/on-sales", (req, res) => {
         name: "Arlequin",
         imageSmall: "http://localhost:3000/arlequin_small.jpg",
         imageLarge: "http://localhost:3000/arlequin_large.jpg",
+        description: loremIpsumDescription,
         price: "650€",
       },
       {
@@ -57,6 +65,7 @@ app.get("/on-sales", (req, res) => {
         name: "Highlander",
         imageSmall: "http://localhost:3000/highlander_small.jpg",
         imageLarge: "http://localhost:3000/highlander_large.jpg",
+        description: loremIpsumDescription,
         price: "3200€",
       },
       {
@@ -64,6 +73,7 @@ app.get("/on-sales", (req, res) => {
         name: "Prestige",
         imageSmall: "http://localhost:3000/prestige_small.jpg",
         imageLarge: "http://localhost:3000/prestige_large.jpg",
+        description: loremIpsumDescription,
         price: "9800€",
       },
     ]);
@@ -77,6 +87,7 @@ app.get("/new-arrivals", (req, res) => {
       name: "Boëme",
       imageSmall: "http://localhost:3000/boeme_small.jpg",
       imageLarge: "http://localhost:3000/boeme_large.jpg",
+      description: loremIpsumDescription,
       price: "3000€",
     },
     {
@@ -84,6 +95,7 @@ app.get("/new-arrivals", (req, res) => {
       name: "Gatsby",
       imageSmall: "http://localhost:3000/gatsby_small.jpg",
       imageLarge: "http://localhost:3000/gatsby_large.jpg",
+      description: loremIpsumDescription,
       price: "4700€",
     },
     {
@@ -91,6 +103,7 @@ app.get("/new-arrivals", (req, res) => {
       name: "Nuage",
       imageSmall: "http://localhost:3000/nuage_small.jpg",
       imageLarge: "http://localhost:3000/nuage_large.jpg",
+      description: loremIpsumDescription,
       price: "700€",
     },
     {
@@ -98,6 +111,7 @@ app.get("/new-arrivals", (req, res) => {
       name: "Obsidian",
       imageSmall: "http://localhost:3000/obsidian_small.jpg",
       imageLarge: "http://localhost:3000/obsidian_large.jpg",
+      description: loremIpsumDescription,
       price: "5320€",
     },
   ]);
