@@ -14,7 +14,7 @@ export default async function Home () {
             {bestSellers.map(bestSeller => (
               <li>
                 <article>
-                  <img src={bestSeller.image} alt="" />
+                  <img src={bestSeller.imageSmall} alt="" />
                   <h3>{bestSeller.name}</h3>
                   <p>{bestSeller.price}</p>
                 </article>
