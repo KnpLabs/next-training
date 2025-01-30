@@ -1,5 +1,6 @@
 import OnSales from "./OnSales";
 import { Suspense } from "react";
+import Link from "next/link";
 
 export default async function Home () {
   const bestSellers = await fetch('http://localhost:8000/best-sellers')
@@ -13,11 +14,13 @@ export default async function Home () {
           <ul>
             {bestSellers.map(bestSeller => (
               <li>
-                <article>
-                  <img src={bestSeller.imageSmall} alt="" />
-                  <h3>{bestSeller.name}</h3>
-                  <p>{bestSeller.price}</p>
-                </article>
+                <Link href={`/product/${bestSeller.id}/details`}>
+                  <article>
+                    <img src={bestSeller.imageSmall} alt="" />
+                    <h3>{bestSeller.name}</h3>
+                    <p>{bestSeller.price}</p>
+                  </article>
+                </Link>
               </li>
             ))}
           </ul>
