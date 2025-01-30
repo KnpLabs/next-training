@@ -167,3 +167,25 @@ p {
   font-size: 5rem;
   margin: 3rem;
 }
+
+.product-details-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-image {
+  padding: 1rem;
+  background-color: var(--white);
+}
+
+.product-description {
+  width: 23rem;
+  padding: 1rem;
+  background-color: var(--white);
+}
+
+.price {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
