@@ -1,7 +1,11 @@
 import { Inter, Bagel_Fat_One } from "next/font/google";
 import Image from "next/image";
-import "./globals.css";
+import "../globals.css";
 import NavigationMenu from "./NavigationMenu";
+
+export const metadata = {
+  title: 'KanapéShop',
+}
 
 const inter = Inter({
   variable: "--font-inter",
