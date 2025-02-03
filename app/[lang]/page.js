@@ -2,14 +2,29 @@ import OnSales from "./OnSales";
 import { Suspense } from "react";
 import Link from "next/link";
 
-export default async function Home () {
-  const bestSellers = await fetch('http://localhost:8000/best-sellers')
+const translations = {
+  en: {
+    bestSellers: 'Best sellers',
+    onSales: 'On sales',
+    latestProducts: 'Latest products',
+  },
+  fr: {
+    bestSellers: 'Meilleures ventes',
+    onSales: 'En promotion',
+    latestProducts: 'Derniers produits'
+  },
+}
+
+export default async function Home ({ params }) {
+  const lang = (await params).lang;
+  const t = translations[lang];
+  const bestSellers = await fetch(`http://localhost:8000/best-sellers`)
     .then(res => res.json());
 
   return (
     <main>
       <section>
-        <h2>Best sellers</h2>
+        <h2>{t.bestSellers}</h2>
         <div className="home-products">
           <ul>
             {bestSellers.map(bestSeller => (
@@ -27,7 +42,7 @@ export default async function Home () {
         </div>
       </section>
       <section>
-        <h2>On sales</h2>
+        <h2>{t.onSales}</h2>
         <div className="home-products">
           <Suspense fallback={<p>Loading...</p>}>
             <OnSales />
@@ -35,7 +50,7 @@ export default async function Home () {
         </div>
       </section>
       <section>
-        <h2>Latest products</h2>
+        <h2>{t.latestProducts}</h2>
         <div className="home-products">
           <p>Will be implemented soon...</p>
         </div>
