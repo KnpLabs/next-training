@@ -12,7 +12,6 @@ function getLocale(request) {
 }
 
 export function middleware(request) {
-  /*
   const { pathname } = request.nextUrl
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -24,7 +23,6 @@ export function middleware(request) {
   request.nextUrl.pathname = `/${locale}${pathname}`
 
   return NextResponse.redirect(request.nextUrl)
-  */
 }
 
 export const config = {
