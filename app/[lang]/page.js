@@ -1,6 +1,7 @@
 import OnSales from "./OnSales";
 import { Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const translations = {
   en: {
@@ -31,7 +32,7 @@ export default async function Home ({ params }) {
               <li>
                 <Link href={`/product/${bestSeller.id}/details`}>
                   <article>
-                    <img src={bestSeller.imageSmall} alt="" />
+                    <Image src={bestSeller.imageSmall} width={145} height={145} alt="" />
                     <h3>{bestSeller.name}</h3>
                     <p>{bestSeller.price}</p>
                   </article>

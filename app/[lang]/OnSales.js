@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function OnSales () {
@@ -10,7 +11,7 @@ export default async function OnSales () {
         <li>
           <Link href={`/product/${onSale.id}/details`}>
             <article>
-              <img src={onSale.imageSmall} alt="" />
+              <Image src={onSale.imageSmall} width={145} height={145} alt="" />
               <h3>{onSale.name}</h3>
               <p>{onSale.price}</p>
             </article>
