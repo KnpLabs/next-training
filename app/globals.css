@@ -112,8 +112,7 @@ footer {
 
 main {
   padding: 1rem;
-  width: -webkit-fill-available;
-  max-width: 56rem;
+  width: 56rem;
   margin: 0 auto;
 }
 
