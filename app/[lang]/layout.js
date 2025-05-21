@@ -3,6 +3,10 @@ import Image from "next/image";
 import "../globals.css";
 import NavigationMenu from "./NavigationMenu";
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'de' }]
+}
+
 export const metadata = {
   title: 'KanapéShop',
 }
