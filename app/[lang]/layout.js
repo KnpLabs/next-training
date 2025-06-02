@@ -1,7 +1,7 @@
 import { Inter, Bagel_Fat_One } from "next/font/google";
 import Image from "next/image";
 import "../globals.css";
-import NavigationMenu from "./NavigationMenu";
+import NavigationMenu from "./(rest)/NavigationMenu";
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'de' }]

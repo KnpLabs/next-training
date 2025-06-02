@@ -1,5 +1,3 @@
-import OnSales from "./OnSales";
-import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,7 +21,6 @@ export default async function Home ({ params }) {
     .then(res => res.json());
 
   return (
-    <main>
       <section>
         <h2>{t.bestSellers}</h2>
         <div className="home-products">
@@ -42,20 +39,5 @@ export default async function Home ({ params }) {
           </ul>
         </div>
       </section>
-      <section>
-        <h2>{t.onSales}</h2>
-        <div className="home-products">
-          <Suspense fallback={<p>Loading...</p>}>
-            <OnSales />
-          </Suspense>
-        </div>
-      </section>
-      <section>
-        <h2>{t.latestProducts}</h2>
-        <div className="home-products">
-          <p>Will be implemented soon...</p>
-        </div>
-      </section>
-    </main>
   );
 }
