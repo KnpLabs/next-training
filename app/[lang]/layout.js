@@ -4,7 +4,7 @@ import "../globals.css";
 import NavigationMenu from "./(rest)/NavigationMenu";
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'de' }]
+  return [{ lang: 'en' }, { lang: 'fr' }]
 }
 
 export const metadata = {
